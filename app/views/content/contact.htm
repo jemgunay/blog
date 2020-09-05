@@ -1,0 +1,72 @@
+<!-- sub-heading -->
+<h2 class="centre-padding">Contact</h2>
+<p>Get in touch!</p>
+<hr>
+<!-- about -->
+<div class="row">
+    <div class="col-sm-6">
+        <p>If you would like to contact me, I can be reached using the platforms listed below or the message submission form to the right. Cheers!</p>
+        <hr>
+        <a href="mailto:jemgunay@yahoo.co.uk" class="contact-anchor">
+            <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
+            <h4>jemgunay@yahoo.co.uk</h4>
+        </a>
+        <br>
+        <a href="https://uk.linkedin.com/in/jem-gunay-b57189b3" class="contact-anchor" target="_blank">
+            <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
+            <h4>LinkedIn</h4>
+        </a>
+        <br>
+        <a href="https://github.com/jemgunay" class="contact-anchor" target="_blank">
+            <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+            <h4>GitHub</h4>
+        </a>
+        <br>
+        <a href="https://youtube.com/user/WaffleKing09" class="contact-anchor" target="_blank">
+            <i class="fa fa-youtube fa-2x" aria-hidden="true"></i>
+            <h4>YouTube</h4>
+        </a>
+        <hr>
+    </div>
+    <div class="col-sm-6">
+        <form action="javascript:void(0)" id="contact-form" data-target="{{ @BASE }}/contact" novalidate>
+            <div id="contact_result"></div>
+            <div class="row">
+                <!-- first & last name fields -->
+                <div class="col-xs-6 form-group">
+                    <label for="inputFirstName">First Name</label>
+                    <input type="text" class="form-control" id="inputFirstName" name="first_name">
+                </div>
+                <div class="col-xs-6 form-group">
+                    <label for="inputSecondName">Second Name</label>
+                    <input type="text" class="form-control" id="inputSecondName" name="second_name">
+                </div>
+            </div>
+            <!-- email field -->
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                    <label for="inputEmail">Email address</label>
+                    <input type="email" class="form-control" id="inputEmail" name="email">
+                </div>
+            </div>
+            <!-- message field -->
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                    <label for="inputMessage">Message</label>
+                    <textarea class="form-control" id="inputMessage" name="message" rows="7"></textarea>
+                </div>
+            </div>
+            <!-- submit button -->
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                    <div class="captcha-container">
+                        <div id="g-recaptcha"></div>
+                    </div>
+                    <div class="contact-submit-container">
+                        <button type="submit" class="btn btn-primary" id="contact-submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,69 @@
+/* typeface */
+@font-face {
+  font-family: 'CENTAUR';
+  /*text-shadow: 1px 1px 1px rgba(0,0,0,0.05);*/
+  src: url('../fonts/CENTAUR.eot');
+  src: local('CENTAUR'), url('../fonts/CENTAUR.woff') format('woff'), url('../fonts/CENTAUR.ttf') format('truetype');
+}
+body {
+  font-family: 'CENTAUR';
+  color: rgba(24, 29, 40, 0.8);
+  height: auto;
+}
+h1 {
+  font-size: 65px;
+  text-align: center;
+}
+h2 {
+  font-size: 40px;
+}
+a.post-clickable h3, h3 {
+  font-size: 30px;
+  line-height: 150%;
+  margin-top: 0px;
+}
+a:hover, a:focus {
+  text-decoration: none;
+  color: rgb(108, 132, 191);
+}
+a {
+  color: rgba(53, 74, 104, 1);
+}
+p a, span a {
+  font-weight: bold;
+}
+h4 {
+  font-size: 20px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+span a, a.post-clickable p, p, h4 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.6px;
+  line-height: 160%;
+}
+a.post-clickable p, a.post-clickable h3 {
+  color: rgba(24, 29, 40, 0.8);
+}
+.contact-anchor h4 {
+  margin-left: 10px;
+  position: relative;
+  bottom: 3px;
+  font-weight: bold;
+}
+.glyphicon {
+  font-size: 34px;
+}
+.content-download {
+  display: inline;
+  position: relative;
+  bottom: 7px;
+}
+
+/* media queries */
+@media (max-width: 992px) {
+  a.post-clickable h3 {
+    font-size: 26px;
+  }
+}

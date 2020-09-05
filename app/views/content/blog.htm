@@ -1,0 +1,76 @@
+<!-- sub-heading -->
+<h2 class="centre-padding">Blog</h2>
+<p>My current developments and curiosities.</p>
+<hr>
+
+<div id="blog-content">
+    <check if="{{ @blog_post }}">
+        <!-- determine if blog post list or single blog post content is being displayed -->
+
+        <false>
+            <!-- blog post list -->
+            <repeat group="{{ @blog_posts }}" value="{{ @blog_post }}" counter="{{ @counter }}">
+                <check if="{{ @blog_post.hidden == false}}">
+
+                    <!-- blog post preview -->
+                    <div class="row">
+                        <div class="col-xs-12 post-clickable" data-target="{{ @BASE }}/blog/post/{{ @blog_post.post_id }}">
+
+                            <!-- title positioned at top of post preview -->
+                            <div class="hidden-sm hidden-lg col-xs-12">
+                                <h3 class="post-title text-center">{{ @blog_post.title | raw }}</h3>
+                            </div>
+
+                            <!-- post image preview -->
+                            <div class="text-center col-xs-12 col-sm-4 col-md-4 col-lg-4 {{ @counter % 2 == 0 ? 'col-sm-push-8 col-md-push-8 col-sm-push-8 col-lg-push-8' : '' }}">
+                                <img src="{{ @BASE }}/content/previews/{{ @blog_post.post_id }}.jpg" class="img-responsive img-shadow img-post-preview">
+                            </div>
+
+                            <!-- post description and  -->
+                            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 {{ @counter % 2 == 0 ? 'col-sm-pull-4 col-md-pull-4 col-lg-pull-4' : '' }}">
+                                <!-- title positioned above post description/to the side of image preview -->
+                                <div class="visible-sm visible-lg">
+                                    <h3 class="post-title text-center">{{ @blog_post.title | raw }}</h3>
+                                </div>
+
+                                <!-- post description -->
+                                <p class="post-description">{{ @trim_blog_content(@blog_post.content) }}</p>
+
+                                <!-- read more anchor -->
+                                <a href="{{ @BASE }}/blog/post/{{ @blog_post.post_id }}" class="read-more-anchor" data-target="{{ @BASE }}/blog/post/{{ @blog_post.post_id }}">
+                                    <h4 class="img-left read-more"><strong>Read more...</strong></h4>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <hr>
+
+                </check>
+            </repeat>
+        </false>
+
+        <true>
+            <!-- single blog post -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 class="centre-padding">{{ @blog_post.title | raw }}</h3><br>
+                    {{ @blog_post.content | raw }}
+                </div>
+            </div>
+            <hr>
+        </true>
+
+    </check>
+
+    <!-- modal for blog post image click -->
+    <div id="post-img-modal" class="modal fade" tabindex="0" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- modal content-->
+            <div class="modal-content thumbnail">
+                <div class="modal-body" id="img-modal-body"></div>
+            </div>
+        </div>
+    </div>
+
+</div>

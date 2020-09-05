@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- header -->
+    <include href="header.htm" />
+
+    <body>
+        <!-- top header -->
+        <div class="main-title">
+            <h1>Jem Gunay</h1>
+        </div>
+
+        <!-- top nav bar -->
+        <div id="initial-param" data-page="{{ @first_param }}"></div>
+        <include href="nav.htm" />
+
+        <!-- banner: image created by Josh Dutton (http://www.thejoshdutton.com) -->
+        <div id="banner-container" height="275">
+            <canvas id="banner" height="275"></canvas>
+        </div>
+
+        <!-- main content -->
+        <div class="container-fluid" id="main-container">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <div class="row">
+                        <div class="col-md-12" id="main-content">
+                            <include href="{{ @view }}" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- side nav bar (do not place inside tabs else breaks) -->
+                <div class="col-md-2" id="navmenu-side-container">
+                    <ul class="nav nav-pills nav-stacked" id="navmenu-side" data-spy="affix" data-offset-top="600">
+                        <h3>Categories</h3>
+                        <!-- categories -->
+                        <li><a href="{{ @BASE }}/blog/category/All">All</a></li>
+                        <repeat group="{{ @categories }}" value="{{ @category }}">
+                            <li><a href="{{ @BASE }}/blog/category/{{ urlencode(@category.name) }}">{{ @category.name }}</a></li>
+                        </repeat>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <include href="footer.htm" />
+    </body>
+</html>
