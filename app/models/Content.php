@@ -24,7 +24,7 @@ class Content extends Database {
             $this->get_all();
             return;
         }
-        $result = $this->db->exec('SELECT * FROM post_category_join WHERE name = ? ORDER BY publish_date DESC', $category);
+        $result = $this->db->exec('SELECT * FROM post_category_join WHERE name = ? AND hidden = 0 ORDER BY publish_date DESC', $category);
         $this->f3->set('blog_posts', $result);
     }
 
