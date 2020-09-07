@@ -14,7 +14,7 @@ class Content extends Database {
 
     // get all posts
     public function get_all() {
-        $this->load(null, array('order' => 'publish_date DESC'));
+        $this->load('hidden = 0', array('order' => 'publish_date DESC'));
         $this->f3->set('blog_posts', $this->query);
     }
 
