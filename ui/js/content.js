@@ -173,10 +173,10 @@ $(document).ready(function() {
 
     // strip subfolder from path
     function stripSubFolder(urlPath) {
-        var targetPage = "projects";
+        var targetPage = "blog";
 
         // determine target page from URL, removing and subfolders from path
-        var mainPages = ['projects', 'blog', 'about', 'contact'];
+        var mainPages = ['blog', 'about', 'contact'];
         for (var i = 0; i < mainPages.length; i++) {
             if (urlPath.indexOf(mainPages[i]) != -1) {
                 targetPage = urlPath.slice(urlPath.indexOf(mainPages[i]));

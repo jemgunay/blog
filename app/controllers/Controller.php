@@ -17,7 +17,7 @@ class Controller {
         $this->f3->set('response_type', 'text/html');
 
         // reference to first param for templates
-        $first_param = Misc::get_param(0) == null ? 'projects' : Misc::get_param(0);
+        $first_param = Misc::get_param(0) == null ? 'blog' : Misc::get_param(0);
         $this->f3->set('first_param', $first_param);
 	}
 

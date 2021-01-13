@@ -17,7 +17,7 @@ $f3->route(
 
 // error page
 $f3->set('ONERROR', function($f3) {
-    $f3->reroute('/projects');
+    $f3->reroute('/blog');
 });
 
 // extend session to prevent user-agent change 403 error

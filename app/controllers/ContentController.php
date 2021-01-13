@@ -17,12 +17,8 @@ class ContentController extends Controller {
         // get categories for side nav
         $this->f3->set('categories', $this->category->get_all());
 
-	    // projects
-        if ($page == 'projects' || $page == null) {
-            $this->f3->set('view', 'content/projects.htm');
-        }
         // blog
-        else if ($page == 'blog') {
+        if ($page == 'blog' || $page == null) {
             $category = $this->f3->get('PARAMS.category');
             $blog_id = $this->f3->get('PARAMS.blog_id');
 

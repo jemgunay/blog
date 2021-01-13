@@ -39,8 +39,7 @@
     background-color: #ffffff;
 }
 .navbar-nav > li{
-    padding-left: 10px;
-    padding-right: 10px;
+    text-align: center;
 }
 
 /* restyle side navmenu */
@@ -53,6 +52,7 @@
 #main-navbar .nav>li>a {
     padding-bottom: 15px;
     padding-top: 15px;
+    width: 120px;
 }
 
 .nav>li>a:hover,

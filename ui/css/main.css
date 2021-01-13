@@ -84,6 +84,9 @@ footer {
 	padding-top: 35px;
 	padding-bottom: 35px;
 }
+.main-title h1 {
+	margin-left: 10px;
+}
 .btn-primary, .btn-primary:focus, .btn-primary:active, .btn-primary:visited, .btn-primary:active:hover {
 	background-color: rgba(24, 29, 40, 0.9);
 	border-color: rgba(24, 29, 40, 0.9);

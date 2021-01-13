@@ -67,13 +67,11 @@ function draw() {
 
 // set arrow target position for current page
 function setBannerArrow(target) {
-	if (target == "projects") {
-		targetTriPos = 180;
-	} else if (target == "blog") {
-		targetTriPos = 65;
+	if (target == "blog") {
+		targetTriPos = 124;
 	} else if (target == "about") {
-		targetTriPos = -40;
+		targetTriPos = 0;
 	} else if (target == "contact") {
-		targetTriPos = -163;
+		targetTriPos = -116;
 	}
 }
