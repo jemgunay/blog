@@ -112,6 +112,7 @@ footer {
 }
 .about-container img {
 	margin-bottom: 10px;
+	width: 100%;
 }
 .captcha-container {
 	width: 304px;
@@ -166,32 +167,14 @@ footer {
 		max-height: 150px;
 	}
 }
-@media (min-width: 1180px) and (max-width: 1299px) {
-	.about-container img {
-		margin-bottom: 20px;
-		width: 40%;
-	}
-}
-@media (min-width: 1300px) and (max-width: 1560px) {
-	.about-container img {
-		margin-top: 38px;
-		margin-bottom: 38px;
-		width: 50%;
-	}
-}
+
 @media (min-width: 1580px) {
 	.post-title {
 		margin-top: 15px;
 	}
 }
-@media (max-width: 1179px) {
-	.about-container img {
-		width: 45%;
-	}
-}
 @media (max-width: 750px) {
 	.about-container img {
-		width: 100%;
-		margin-bottom: 30px;
+		margin-top: 30px;
 	}
 }
